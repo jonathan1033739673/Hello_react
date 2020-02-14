@@ -7,18 +7,14 @@ import BadgeForm from '../components/BadgeForm'
 import "../styles/BadgeNew.css"
 
 class BadgeNew extends React.Component{
-    constructor(props) {
-      super(props);
-      this.handleChange = this.handleChange.bind(this);
-      this.state = {
-          form:{
-            firstName: "",
-            lastName: "",
-            email: "",        
-            jobTitle: "Software Engineer",
-            twitter: ""
-          }
-      }
+    state = {
+        form:{
+          firstName: "",
+          lastName: "",
+          email: "",        
+          jobTitle: "Software Engineer",
+          twitter: ""
+        }
     }
     handleChange  = event => {
         this.setState({

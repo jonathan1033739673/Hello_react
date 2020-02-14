@@ -2,18 +2,7 @@ import React from  'react'
 import "../styles/badge.css"
 
 class BadgeForm extends React.Component {
-    // state = {
-    //     firstName: "",
-    //     lastName: "",
-    //     email: "",        
-    //     jobTitle: "Software Engineer",
-    //     twitter: ""
-    // } //se debe inicializar los estados como un objeto vacio
-    // handleChange = (event) => {
-    //     this.setState({
-    //         [event.target.name]: event.target.value
-    //     })
-    // }
+
     handleClick = (event) => {
         console.log("Boton")
     }
