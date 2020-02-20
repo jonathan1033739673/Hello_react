@@ -1,9 +1,9 @@
 import React from 'react';
 
-import NavBar from '../components/NavBar'
 import BadgesList from '../components/BadgesList'
 import header from '../images/badge-header.svg'
 import "../styles/badges.css"
+import { Link } from 'react-router-dom';
 
 class Badges extends React.Component{
 state= {
@@ -41,8 +41,7 @@ state= {
 
     render(){
         return (
-            <div>
-                <NavBar />
+            <React.Fragment>
                 <div className="Badges">
                     <div className="Badges__hero">
                         <div className="Badges__container">
@@ -53,9 +52,9 @@ state= {
 
                 <div className="Badges__container">
                     <div className="Badges__buttons">
-                        <a href="/bagdes/new" className="btn btn-primary">
+                        <Link to="/badges/new" className="btn btn-primary">
                             New Badge
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="Badges__list">
@@ -64,7 +63,7 @@ state= {
                         </div>
                     </div>
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 }

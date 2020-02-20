@@ -1,5 +1,7 @@
 import React from  'react'
 import "../styles/badge.css"
+import "../styles/badges.css"
+import { Link } from 'react-router-dom'
 
 class BadgeForm extends React.Component {
 
@@ -75,6 +77,9 @@ class BadgeForm extends React.Component {
                         className="btn btn-primary">
                         Save
                     </button>
+                    <Link to="/badges" className="btn btn-primary">
+                        Back
+                    </Link>
                 </div>
             </form>
         </div>
