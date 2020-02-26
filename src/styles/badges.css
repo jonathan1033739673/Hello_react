@@ -28,3 +28,16 @@
     justify-content: flex-end;
     margin-bottom: 1rem;
   }
+
+  .Badges__home {
+    width: 100%;
+    padding: 9rem 0;
+    background: url('../images/stars.svg'), #1B1B25;
+    background-repeat: repeat;
+    margin-bottom: 1rem;
+  }
+  
+  .body {
+    font-family: 'Lato', 'Helvetica Neue', sans-serif;
+    color: #F4F4F7;
+  }
