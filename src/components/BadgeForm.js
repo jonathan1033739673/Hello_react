@@ -9,16 +9,15 @@ class BadgeForm extends React.Component {
         console.log("Boton")
     }
 
-    handleSubmit = (event) => {
-        event.preventDefault()
-        console.log(this.state)
-    }
-
     render(){
         return (
         <div className="">
             <h1>New Attendant</h1>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.props.submit}>
+                {this.props.error && 
+                (<p className="text-danger">{this.props.error.message}</p>)
+                }
+
                 <div className="form-group">
                     <label>First Name</label>
                     <input 
@@ -26,6 +25,7 @@ class BadgeForm extends React.Component {
                         className="form-control" 
                         type="text" 
                         name="firstName"
+                        placeholder="Your name"
                         value={this.props.formValues.firstName}
                     />
                 </div>
@@ -36,6 +36,7 @@ class BadgeForm extends React.Component {
                         className="form-control" 
                         type="text" 
                         name="lastName"
+                        placeholder="Your last name"
                         value={this.props.formValues.lastName}
                     />
                 </div>
@@ -66,7 +67,7 @@ class BadgeForm extends React.Component {
                         onChange={this.props.change} 
                         className="form-control" 
                         type="text" 
-                        placeholder="@example123"
+                        placeholder="example123"
                         name="twitter"
                         value={this.props.formValues.twitter}
                     />
