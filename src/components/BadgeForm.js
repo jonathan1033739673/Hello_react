@@ -77,7 +77,7 @@ class BadgeForm extends React.Component {
                         className="btn btn-primary">
                         Save
                     </button>
-                    <Link to="/badges" className="btn btn-primary">
+                    <Link onClick={this.handleBack} to={`/badges/${this.props.id}/details`} className="btn btn-primary">
                         Back
                     </Link>
                 </div>

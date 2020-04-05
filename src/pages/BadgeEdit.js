@@ -91,6 +91,7 @@ class BadgeEdit extends React.Component{
                                 submit={this.handleSubmit} 
                                 formValues={this.state.form}
                                 error={this.state.error}
+                                id={this.props.match.params.badgeId}
                             />
                         </div>
                     </div>

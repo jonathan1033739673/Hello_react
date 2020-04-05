@@ -20,8 +20,6 @@ class Badges extends React.Component{
 
     componentDidMount(){
         this.fetchData()
-
-        this.intervalId = setInterval(this.fetchData, 5000)
     }
 
     componentDidUpdate(){
@@ -29,13 +27,12 @@ class Badges extends React.Component{
     }
 
     componentWillUnmount(){
-        clearInterval(this.intervalId)
     }
 
     fetchData = async () => {
-        this.setState({loading:true, error:null})
 
         try {
+            this.setState({loading:true, error:null})
             const data = await api.badges.list()
             this.setState({loading:false, data:data})
         } catch (error) {
@@ -72,7 +69,7 @@ class Badges extends React.Component{
                             <BadgesList badges={this.state.data}/>
                         </div>
                     </div>
-                    {this.state.loading && ('Loading..')}
+                    {/*this.state.loading && ('Loading..')*/}
                 </div>
             </React.Fragment>
         )
